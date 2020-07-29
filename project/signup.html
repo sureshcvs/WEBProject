@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="signup.css" rel="stylesheet">
+    <script>
+        function valid(){
+            var Firstname = document.getElementById("Fn");
+            var Lastname = document.getElementById("Ln");
+			var Email = document.getElementById("Em");
+			var reg = /^[a-zA-Z0-9!@#$%^&*](?=.*[0-9])(?=.*[!@#$%^&*]){8,15}$/;
+			var Phonenumber = document.getElementById("Ph");
+			var Password = document.getElementById("Pw");
+			var reg = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/;
+			
+			
+            if(Firstname.value.trim()=="" || Lastname.value.trim()=="" ){
+                alert("Firstname and Lastname not be empty");
+                return false;
+            }
+            else{
+                alert("accepted");
+                return true;
+            }
+			if(!Email.match(reg)){
+				alert("8 to 15 character which conatin at least one alphabets ,special character and at least one numeric");
+				return false;
+			}
+			else{
+				alert("Email accepted");
+				return true;
+			}
+        
+			if(Phonenumber.length=10){
+				alert("Phonenumber accepted");
+				return true;
+			}
+			else{
+				alert("not accepted....length should be 10");
+				return false;
+			}
+
+			if(!Password.match(reg)){
+				alert("8 to 15 character which conatin at least one alphabets ,special character and at least one numeric");
+				return false;
+			}
+			else{
+				alert("Password accepted");
+				return true;
+			}
+
+		}
+
+    </script>
+</head>
+<body>
+    <form action="login.html" onsubmit="return valid()">
+        <div class="container">
+          <h2>Sign Up</h2>
+          <label><b>Firstname:</b></label></br>
+          <input type="text" placeholder="Enter Your Name" id="Fn"></br>
+          <label><b>Lastname:</b></label></br>
+          <input type="text" placeholder="Enter Your Name" id="Ln"></br>
+          <label><b>Email:</b></label></br>
+          <input type="email" placeholder="Enter Your Email" id="Em"></br>
+          <label><b>Phonenumber:</b></label></br>
+          <input type="number" placeholder="Enter Your PhoneNumber" id="Ph"></br>
+          <label><b>Date Of Birth:</b></label></br>
+          <input type="date" placeholder="Enter Your Birthday"  required><br>
+           <label><b>Gender:</b></label></br>
+          <input type="radio" name="gender" value="male" id="rd"><span id="but">Male</span>
+          <input type="radio" name="gender" value="female" id="rd"><span id="but">Female</span>
+          <input type="radio" name="gender" value="other" id="rd"><span id="but">Other</span><br>
+          <label><b>Password:</b></label></br>
+          <input type="password" placeholder="Enter Your Password" id="Pw"></br></br>
+          <button type="submit" class="btn">Sign Up</button></br>
+          <p align="center">Already have an account? 
+          <a href="index.html"><button type="button" class="button">Back</button></a>
+      </form>
+      </div>
+      
+      
+    
+</body>
+</html>
