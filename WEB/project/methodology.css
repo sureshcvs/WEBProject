@@ -1,0 +1,44 @@
+body
+{
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+color:#33FFC4 ;
+}
+img{
+	height:200px;
+	width:270px;
+}
+.container
+{
+	position: relative;
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+	grid-template-rows: auto;
+	grid-gap: 0 40px;
+}
+.container .box
+{
+	position: relative;
+	height: 350px;
+	border: 2px solid green;
+}
+button{
+	border:2px solid #33FFCE;
+	border-radius:20px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:30px;
+	padding-right:30px;
+	margin-top:10px;
+	margin-right:20px;
+	margin-left:15px;
+}
+button:hover{
+background-color:#FFD133;
+border-radius:30px;
+opacity:9px;
+}
